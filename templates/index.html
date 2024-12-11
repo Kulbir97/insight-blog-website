@@ -2,20 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insight Blog - Home</title>
+    <title>Insight Blog</title>
 </head>
 <body>
-    <h1>Welcome to Insight Blog</h1>
-    <a href="/create">Create a New Blog Post</a>
-    <h2>Blog Posts</h2>
+    <h1>Insight Blog</h1>
+    <a href="/create">Create a New Post</a>
     <ul>
-        <!-- Blog posts will be displayed here -->
         {% for post in posts %}
-        <li>
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.content }}</p>
-        </li>
+        <li><strong>{{ post.title }}</strong>: {{ post.content }}</li>
         {% endfor %}
     </ul>
 </body>
